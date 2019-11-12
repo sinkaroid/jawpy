@@ -1,8 +1,8 @@
 import requests
 import webbrowser, os
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 from bs4 import BeautifulSoup
-from pathlib import Path
+
 
 print(Fore.RED)
 print("""
@@ -33,7 +33,7 @@ print ('OK '+ Fore.GREEN +bulan+ Style.RESET_ALL)
 
 for cal in cal_list_items:
     
-    
+
     with open(''+bulan+'.html', 'w') as f:
         for cal in cal_list_items:
              f.write("%s\n" % str(cal.prettify().replace('<td width="115">', '<center><br>')))
